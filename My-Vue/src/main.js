@@ -6,7 +6,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import  VueResource  from 'vue-resource'
-// import axios from 'axios'
+// import axios from 'axiogits'
 // import VueAxios from 'vue-axios'
 // Vue.use(VueResource)
 // Vue.prototype.$axios = axios
