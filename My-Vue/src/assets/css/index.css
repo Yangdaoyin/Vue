@@ -25,4 +25,24 @@
   font-family: 仿宋;
   font-size: 15px;
 }
+.yang-head-page{
+  height: 90px;
+  width: 1526px;
+  background: black;
+  margin-top: -60px
+}
+.yang-footer-page{
+  height: 70px;
+  width: 1526px;
+  background: black;
+  position:absolute;
+}
+.foot-message-coler{
+  color: darkgray;
+  margin-left: 700px;
+  padding-top: 20px;
+  font-family: 仿宋;
+  font-size: 12px;
+  line-height: 0px;
+}
 

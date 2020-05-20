@@ -7,8 +7,16 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: () => import('../components/HelloWorld.vue'),
+      name: 'Layout',
+      component: () => import('../view/frame/Layout.vue'),
+      children: [
+        {
+          path: 'Inner',
+          name: 'Inner',
+          redirect: '/Inner',
+          component: () => import('../view/frame/Inner.vue'),
+        }
+      ]
     },
     {
       path: '/view/myTest',

@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import Layout from "./view/frame/Layout";
+import './comment/style.css'
 import  VueResource  from 'vue-resource'
 // import axios from 'axiogits'
 // import VueAxios from 'vue-axios'
@@ -18,6 +20,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  components: { Layout },
+  template: '<Layout/>'
 })
