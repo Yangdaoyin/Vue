@@ -1,7 +1,7 @@
 <template>
 <div style="width: 1520px">
   <yang-head-page></yang-head-page>
-  <MyTest></MyTest>
+  <my-test></my-test>
   <yang-footer-page></yang-footer-page>
 </div>
 </template>
@@ -10,12 +10,9 @@
     import YangHeadPage from "../../components/yang-head-page";
     import MyTest from "../myTest";
     import YangFooterPage from "../../components/yang-footer-page";
+    import UserForm from "../user/userForm";
     export default {
         name: "Layout.vue",
-      components: {YangFooterPage, MyTest, YangHeadPage}
+      components: {UserForm, YangFooterPage, MyTest, YangHeadPage}
     }
 </script>
-
-<style scoped>
-
-</style>

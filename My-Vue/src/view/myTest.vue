@@ -23,7 +23,7 @@
         <el-row align="center">
           <el-col :span="10">
             <el-form-item prop="content1" style="color: red" label-width="60px">
-              <el-button @click="handleSave" style="width: 250px; font-family: 仿宋; font: bold; font-size: 16px; margin-top: 10px">登录</el-button>
+              <el-button @click="handleLogin" style="width: 250px; font-family: 仿宋; font: bold; font-size: 16px; margin-top: 10px">登录</el-button>
             </el-form-item>
           </el-col>
         </el-row>
@@ -47,11 +47,8 @@
       }
     },
     methods: {
-      handleSave () {
-        submitAPI ({
-          params1: this.content
-        })
-        console.log(this.content)
+      handleLogin () {
+        this.$router.push({path: 'USERFORM'})
       }
     }
   }
