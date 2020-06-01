@@ -3,13 +3,13 @@
   <yang-head-page></yang-head-page>
   <div align="center" class="yang-login-footer">
     <div class="yang-login-foot">
-      <el-form align="center" class="yang-login-form">
+      <el-form align="center" v-model="form" class="yang-login-form">
         <el-form-item label-width="80px" style="margin-top: -10px">
           <div class="icon-point-right" style="color: ghostwhite; font-family: 仿宋; font-size: 25px" >我的项目</div>
         </el-form-item>
         <el-row style="margin-top: -10px">
           <el-col :span="10">
-            <el-input prefix-icon="iconfont 30px icon-user" type="text" style="width: 250px; margin-left: 60px; font-size: 20px" v-model="content">
+            <el-input prefix-icon="iconfont 30px icon-user" type="text" style="width: 250px; margin-left: 60px; font-size: 20px" v-model="form.name">
             </el-input>
 
 <!--            </el-form-item>-->
@@ -17,7 +17,7 @@
         </el-row>
         <el-row align="center">
           <el-col :span="10">
-              <el-input prefix-icon="iconfont 30px icon-lock" type="text" style="width: 250px; margin-left: 60px; font-size: 20px" v-model="content"></el-input>
+              <el-input prefix-icon="iconfont 30px icon-lock" type="text" style="width: 250px; margin-left: 60px; font-size: 20px" v-model="form.pawd"></el-input>
           </el-col>
         </el-row>
         <el-row align="center">
@@ -38,17 +38,32 @@
   import img from '../assets/logo.png'
   import '../assets/css/index.css'
   import YangHeadPage from "../components/yang-head-page";
+  import axios from "axios";
   export default {
     components: {YangHeadPage},
     data () {
       return {
+        form: {
+          name: '',
+          pawd: ''
+        },
         imgUrl: img,
         content: '', // 内容
       }
     },
     methods: {
       handleLogin () {
-        this.$router.push({path: 'USERFORM'})
+        axios({
+          method:'post',
+          url:'http://localhost:8090/mooc/getString',
+          // cache:false,
+          params:{form:this.form},
+          headers: {
+            'Content-Type':'multipart/form-data'
+          },
+        }).then(res=>{
+
+        })
       }
     }
   }

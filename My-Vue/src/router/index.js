@@ -5,10 +5,10 @@ import myTest from '@/view/myTest'
 Vue.use(Router)
 // 账号 yxyy20040901 ......
 let children = []
-const srcRouters = require.context('./', true, /^\.\/((?!\/)[\s\S]+\/route\.js$/)
-srcRouters.keys().map(key => srcRouters(key).default).forEach(sa => {
-  children = children.concat(sa)
-})
+// const srcRouters = require.context('./', true, /^\.\/((?!\/)[\s\S]+\/route\.js$/)
+// srcRouters.keys().map(key => srcRouters(key).default).forEach(sa => {
+//   children = children.concat(sa)
+// })
 export default new Router({
   routes: [
     {
